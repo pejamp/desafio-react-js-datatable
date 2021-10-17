@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { DatatableContext } from "../../context/DatatableContext";
 
+import './styles.css';
+
 export function Summary() {
   const { isSelected } = useContext(DatatableContext);
 
@@ -19,9 +21,12 @@ export function Summary() {
   })
   
   return (
-    <table>
-      <caption>Sumário dos recursos dos servidores</caption>
-      <tbody>
+    <section className="summary">
+      <header className="header">
+        <h2>Sumário dos recursos dos servidores</h2>
+      </header>
+      
+      <table className="content">
         <tr>
             <th scope="row">Servidores Selecionados</th>
             <td>{summary.servers} servidores selecionados</td>
@@ -38,7 +43,7 @@ export function Summary() {
             <th scope="row">Total de Discos</th>
             <td>{summary.disk} GB</td>
         </tr>
-      </tbody>
-    </table>
+      </table>
+    </section>
   );
 }

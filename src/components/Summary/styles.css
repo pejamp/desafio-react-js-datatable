@@ -1,0 +1,38 @@
+.summary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid #b7b7b7;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header {
+  background: #f0f0f0;
+}
+.header h2 {
+  margin: 0;
+  padding: 12px;
+}
+
+.content {
+  margin: 16px;
+  border: 0.5px solid #dddddd;
+  border-radius: 5px;
+}
+.content tr {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border-bottom: 0.5px solid #dddddd;
+}
+.content tr:last-child {
+  border: none;
+}
+.content tr th {
+  background: #f0f0f0;
+}
+.content th,
+.content td {
+  padding: 12px 20px;
+  font-weight: 700;
+}
